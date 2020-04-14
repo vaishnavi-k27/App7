@@ -17,21 +17,17 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-I am writing this code to create a simple diagnostic website where the user can answer 4 yes or no questions and find out if they have an infection. 
-the code is used to stylize the interface and setup the website. The code also helps us click between pages, make buttons, and overall
-just create the website. 
+showing how which symptoms correspond to which sickness using a diagnostic chart.  
  
 Known Issues:
-The results page doesn't run fully/ properly on iPhones. instead of the results page showing up after the 4th question, it 
-goes back to the first page and is unresponsive. to fix this, you have to go to the search bar and reenter the website url. 
-this issue is only on iPhones (for some reason) and only affects the results page. The app works perfectly fine on Android devices. 
+If there is a lot of text on the page (title page), not all the text is visible on phones.  
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
    <head> 
-      <title> DO YOU HAVE AN INFECTION??</title>  
+      <title>IS IT CORONAVIRUS??? or just a cold, flu, or allergies</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -218,6 +214,94 @@ change with every page. -->
 		<a href="#results" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
 		<a href="#results" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
 	</div>
+	
+	
+<div class="page" id="five"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#six" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#six" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
+	
+<div class="page" id="six"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#seven" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#seven" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
+	
+<div class="page" id="seven"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 7</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#eight" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#eight" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
+	
+<div class="page" id="eight"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 8</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#nine" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#nine" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
+	
+	
+<div class="page" id="nine"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#ten" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#ten" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
+	
+	
+<div class="page" id="ten"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 10</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#eleven" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#eleven" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
+	
+	
+<div class="page" id="eleven"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 11</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#results" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#results" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
 	
 	
 <div class="page" id="results"> 
