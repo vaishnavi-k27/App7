@@ -1,0 +1,265 @@
+<!DOCTYPE html> 
+<html> 
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+ 
+THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+ 
+ 
+Authors in chronological order of contribution:
+Tim Riedel
+VAISHNAVI KOTHAKONDA
+ 
+Further Information:
+http://cns.utexas.edu/fri
+ 
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+ 
+Brief Description of Goal of Code:
+I am writing this code to create a simple diagnostic website where the user can answer 4 yes or no questions and find out if they have an infection. 
+the code is used to stylize the interface and setup the website. The code also helps us click between pages, make buttons, and overall
+just create the website. 
+ 
+Known Issues:
+The results page doesn't run fully/ properly on iPhones. instead of the results page showing up after the 4th question, it 
+goes back to the first page and is unresponsive. to fix this, you have to go to the search bar and reenter the website url. 
+this issue is only on iPhones (for some reason) and only affects the results page. The app works perfectly fine on Android devices. 
+
+https://www.w3schools.com/w3css/default.asp
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+-->
+	
+   <head> 
+      <title> DO YOU HAVE AN INFECTION??</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+<!-- This is about the header section and how the content will be displayed. so the viewport makes the website fit on the device perfectly
+meta tags contain important info about the code, but don't show up when the code is run. this section also contains the header/title which shows 
+up on the tab of the website.-->
+
+<script>
+        var YESinfection_count = 0;
+        var NOinfection_count = 0;
+	var YESinfectionPercent = 0; 
+	var NOinfectionPercent = 0;
+		
+        function YESinfectionAdd(){
+            YESinfection_count = YESinfection_count + 1;
+        }
+
+        function NOinfectionAdd(){
+            NOinfection_count = NOinfection_count + 1;
+        }
+	
+		
+/*this java script defines the variables I will be using in my functions. 
+the YESinfection count and NOinfection count variables start at 0 before any questions are answered 
+and are added to when the user clicks yes or no (depending on the question). The functions 
+for YESinfectionAdd and NOinfectionAdd are simple because they just add 1 to the corresponding count as buttons are clicked on the questions pages. 
+the variables YESinfectionPErcent and NOinfectionPercent are defined here but not used until later in the code. 
+Note that all code written in JavaScript is started and ended with the script closer. */
+	
+  </script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+	
+	
+	<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+	
+<style>
+        img, object{
+        max-height:50%;
+        max-width:50%;
+        }
+</style>
+	
+</style>
+
+<!--the <style> </style> code above is to set up the dimmensions of the different pages and bodies of the code. This includes the
+margins, widths, lengths, and alignments. -->
+<!--the last style segment is to resize images for different devices. On smaller devices, the picture might go off the page, so the resizing helps
+to keep the image a max percentage of the screen. this code in particular doesn't allow the images to be larger than 50% of screen.
+the max height and max width are the max percentage of the image can be of the screen --> 
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>DO YOU HAVE AN INFECTION?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>so you got a cut and broke the skin barrier, exposing yourself to all the gross bacteria in the world and don't know if you have an infection or not.</p>
+	
+	<p>you've come to the right place. just answer 4 quick yes/no questions and find out if you might have an infection. 
+	and in the future, please be careful. there's a lot of bad bacteria out there waiting to ruin your life :) 
+	</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> LET'S GO </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 	
+	Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			
+	does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<img src="cut on knee.jpg" alt="cut on knee" style="width:350px;height:200px;">
+	
+	
+<!-- above is code for the cover page of this website. it has the paragrapgh of intoductory text (which is classified by the <p>). there is also a button 
+with with the text "LET'S GO" on it. it is stylized to have a rounded rectangular shape with the w3-round command and was colored grey with
+w3-grey. when you press the button, it takes you to the next page. this is because of the href= command which directs the user to page one or 
+id= one. all these page instructions are found between the <a> </a>. -->
+	
+	
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        	<p>Is the redness around your wound increasing?</p>  
+		<a href="#two" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#two"  onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+		
+    	</div>
+</div>
+
+<!-- the code above is for the first question page of the website. it is divided from the title/ intro page by the <div>
+and ends with </div>. each new page is started and closed by the <div> and </div>, as you will see below. This division is classified
+as a page and is given the id of one because it's the first question page. The next division is identifying the page header and the header 
+title is Question 1. The question 1 header is displayed on the screen because it is between the <h1> and </h1> which identify a header type. 
+The header division is closed off by a </div> (as always) and a new division starts. This next division holds the content of the page.
+Here we ask the first question, which is surrounded by the <p> and </p>, which are paragraph elements. These allow you to write between 
+them. We see the button function again (<a> </a>) but there are two this time, because we are asking a yes or no question. when clicked,
+the buttons take the user to the page identified in href= . (This is the case for all buttons, except the results button on the results
+page, because it is the last page and the results appear right there on that page, so there is no href for that button.) Both buttons are
+coded as black with white text and when a button is clicked, the corresponding function (which is named after the onclick=) runs and adds
+a number to the proper variables described above. Finally, the buttons are labled >yes< or >no<, so the user click on their answer. 
+when they click, depending on the question and the answer, a point will be added to either the NOinfection or YESinfection count, using the functions
+above. This format of adding a division for each page, identifying it with a number and using more divisions to create the apprppriate 
+headers, questions, and buttons (with adding counts), is repeated for the next five questions pages. The basic formula of each page is 
+the same, but the questions asked (between the <p> </p>) and the onclick commands (which add to the correct NOinfection or YESinfection counts) 
+change with every page. -->
+
+<div class="page" id="two"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a fever?</p>
+		<a href="#three" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#three" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+</div>	
+
+<div class="page" id="three"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is the wound oozing yellow or greenish pus or cloudy drainage?</p>
+		<a href="#four" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#four" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+</div>
+	
+<div class="page" id="four"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
+		<a href="#results" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
+		<a href="#results" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+	</div>
+	
+	
+<div class="page" id="results"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	<p id= "actualresults"> </p>
+	<script>
+		function Results(){
+			YESinfectionPercent = YESinfection_count/4;
+			NOinfectionPercent = NOinfection_count/4; 
+
+			var resultText = document.getElementById("actualresults"); 
+			resultText.innerHTML = "Probability it is an infection =" + YESinfectionPercent + "<br> Probability it is not an infection =" + NOinfectionPercent;
+			}
+	</script>
+	<a onclick="Results();" class="w3-btn w3-black"> results </a>
+	<div id="content" class="w3-container">
+	</div>
+</div>
+	
+</div>
+	
+<!-- This is the last page of the NOinfection or YESinfection website and it is identified as the results page. The first division is similar to 
+the other pages at the header, but changes from there. Here I use JavaScript to create a new function called Results() to calculate 
+the probability of NOinfection vs YESinfection. To make the Results() function with JavaScript, I used <script> and the variables set in the beginning 
+code, like a YESinfection_count, NOinfection_count, YESinfectionPercent, and NOinfectionPercent. I set YESinfectionPercent = to the YESinfection_count (which was collected
+from the 4 yes no questions) and divided by 4 because there were 4 questions. I did the same with the NOinfectionPercent and NOinfection_count variables.
+To display the percentages, I used the code given to us in the app assignment. This code creates a variable to display the result text 
+and then using the innerHTML command, displays the text for propabilities of YESinfection and NOinfection with their corresponding percentages. 
+The <br> is used to break the text and go to the next line, like an enter key. I end with the </script> because I am done with the 
+function and need to switch from JavaScript to HTML. The last part of the results page is a button that will display the percentages
+I found with the Results() function. This will displayed because of the onclick= command. I end the page with the closing divisions. -->
+
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+<!-- the formatting of the footer near the bottom of the page. 
+The footer says "DIY!" at the bottom of each page becasue of paragraph commands. this also appears on every page because it is added
+outside of each page and not within. -->
+
+</body>
+</html>
+<!--signifies the closing of the body and the end of html code-->
