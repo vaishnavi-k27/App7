@@ -1,6 +1,9 @@
 <!DOCTYPE html> 
 <html> 
-<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream 
+at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product 
+-- it is for entertainment purposes only.  Any user of this code does so at their own risk. 
+Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
  
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
@@ -33,9 +36,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
-<!-- This is about the header section and how the content will be displayed. so the viewport makes the website fit on the device perfectly
-meta tags contain important info about the code, but don't show up when the code is run. this section also contains the header/title which shows 
-up on the tab of the website.-->
+<!-- This is about the header section and how the content will be displayed. the viewport makes the website fit on the device perfectly.
+meta tags contain important info about the code, but don't show up when the code is run. 
+this section also contains the header/title which shows up on the tab of the website.-->
 
 <script>
         var corona_count = 0;
@@ -133,8 +136,8 @@ Note that all code written in JavaScript is started and ended with the script cl
 
 <!--the <style> </style> code above is to set up the dimmensions of the different pages and bodies of the code. This includes the
 margins, widths, lengths, and alignments. -->
-<!--the last style segment is to resize images for different devices. On smaller devices, the picture might go off the page, so the resizing helps
-to keep the image a max percentage of the screen. this code in particular doesn't allow the images to be larger than 50% of screen.
+<!--the last style segment is to resize images for different devices. On smaller devices, the picture might go off the page, so resizing
+helps keep the image a max percentage of the screen. this code in particular doesn't allow the images to be larger than 50% of screen.
 the max height and max width are the max percentage of the image can be of the screen --> 
 
 <body>
@@ -147,9 +150,10 @@ the max height and max width are the max percentage of the image can be of the s
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> LET'S GO </a>
 	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 	
-	Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			
-	does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code was developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream
+		at The University of Texas at Austin.  This code is shared for demonstration purposes & should'nt be considered a product
+		-- it is for entertainment purposes only. Any user of this code does so at their own risk. 
+		Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
 	
@@ -366,9 +370,16 @@ change with every page. some onclick commands have multiple functions to run bec
 				"<br> Probability it is allergies =" + allergies_percent;
 			}
 	</script>
+	
 	<a onclick="Results();" class="w3-btn w3-black"> results </a>
+	
 	<div id="content" class="w3-container">
 	</div>
+	
+	<canvas id="myCanvas" width="200" height="150" style="border:3px solid #d3d3d3;"> 
+	<!--created a canvas element called myCanvas, dimensions are 200x150. 
+	there's also a border around the canvas, defined by the style attribute. it is a 3 pixel wide solid grey border -->
+	</canvas>
 </div>
 	
 </div>
