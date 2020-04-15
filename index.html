@@ -151,6 +151,8 @@ the max height and max width are the max percentage of the image can be of the s
 	Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			
 	does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	
+	
 	<img src="cut on knee.jpg" alt="cut on knee" style="width:350px;height:200px;">
 	
 	
@@ -337,9 +339,9 @@ change with every page. some onclick commands have multiple functions to run bec
 	
 	<div id="content" class="w3-container">
         	<p>Do you have diarrhea?</p>  
-		<a href="#three"  onclick="coronaAdd();" class="w3-btn w3-black">sometimes</a> 
-		<a href="#three"  onclick="coldAdd();allergiesAdd();" class="w3-btn w3-black">no</a>
-		<a href="#three"  onclick="fluAdd();" class="w3-btn w3-black">sometimes, and I am a child</a>
+		<a href="#results"  onclick="coronaAdd();" class="w3-btn w3-black">sometimes</a> 
+		<a href="#results"  onclick="coldAdd();allergiesAdd();" class="w3-btn w3-black">no</a>
+		<a href="#results"  onclick="fluAdd();" class="w3-btn w3-black">sometimes, and I am a child</a>
     	</div>
 </div>
 	
@@ -352,11 +354,16 @@ change with every page. some onclick commands have multiple functions to run bec
 	<p id= "actualresults"> </p>
 	<script>
 		function Results(){
-			YESinfectionPercent = YESinfection_count/4;
-			NOinfectionPercent = NOinfection_count/4; 
+			corona_percent = corona_count/11;
+			cold_percent = cold_count/11;
+			flu_percent = flu_count/11;
+			allergies_percent = allergies_count/11; 
 
 			var resultText = document.getElementById("actualresults"); 
-			resultText.innerHTML = "Probability it is an infection =" + YESinfectionPercent + "<br> Probability it is not an infection =" + NOinfectionPercent;
+			resultText.innerHTML = "Probability it is coronavirus =" + corona_percent + 
+				"<br> Probability it is a cold =" + cold_percent +
+				"<br> Probability it is a flu =" + flu_percent +
+				"<br> Probability it is allergies =" + allergies_percent;
 			}
 	</script>
 	<a onclick="Results();" class="w3-btn w3-black"> results </a>
@@ -366,13 +373,13 @@ change with every page. some onclick commands have multiple functions to run bec
 	
 </div>
 	
-<!-- This is the last page of the NOinfection or YESinfection website and it is identified as the results page. The first division is similar to 
+<!-- This is the last page of the app 7 and it is identified as the results page. The first division is similar to 
 the other pages at the header, but changes from there. Here I use JavaScript to create a new function called Results() to calculate 
-the probability of NOinfection vs YESinfection. To make the Results() function with JavaScript, I used <script> and the variables set in the beginning 
-code, like a YESinfection_count, NOinfection_count, YESinfectionPercent, and NOinfectionPercent. I set YESinfectionPercent = to the YESinfection_count (which was collected
-from the 4 yes no questions) and divided by 4 because there were 4 questions. I did the same with the NOinfectionPercent and NOinfection_count variables.
-To display the percentages, I used the code given to us in the app assignment. This code creates a variable to display the result text 
-and then using the innerHTML command, displays the text for propabilities of YESinfection and NOinfection with their corresponding percentages. 
+the probability each illness. To make the Results() function with JavaScript, I used <script> and the variables set in the beginning 
+code, like the illness_counts and illness_percents. I set corona_percent = corona_count/11 (which was collected
+from the 11 questions) and divided by 11 because there were 11 questions. I did the same with the other illness variables.
+To display the percentages, I used the code given to us in a previous app assignment. This code creates a variable to display the result text 
+and then using the innerHTML command, displays the text for propabilities of each illness with their corresponding percentages. 
 The <br> is used to break the text and go to the next line, like an enter key. I end with the </script> because I am done with the 
 function and need to switch from JavaScript to HTML. The last part of the results page is a button that will display the percentages
 I found with the Results() function. This will displayed because of the onclick= command. I end the page with the closing divisions. -->
