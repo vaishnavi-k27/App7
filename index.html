@@ -380,6 +380,22 @@ change with every page. some onclick commands have multiple functions to run bec
 	<!--created a canvas element called myCanvas, dimensions are 200x150. 
 	there's also a border around the canvas, defined by the style attribute. it is a 3 pixel wide solid grey border -->
 	</canvas>
+	
+	<img id="chart" src="chart.png" alt="chart" width="150" height="75" > <!--this identifies an image called chart. the source of the image is the png
+called chart.png which was uploaded to this repository. if chart.png is not found, the word chart will be displayed. 
+the image's dimensions are 150x75 -->
+		
+		<script> //starting the JavaScript part of the button so it can perform a function
+		function createImage() { //the createImage function is defined. this function will put the image identified above on the canvas
+  			var canvas3 = document.getElementById("myCanvas"); // retrieveing the canvas element called myCanvas.
+ 			var context3 = canvas3.getContext("2d"); // myCanvas is a 2D element
+			var img3 = document.getElementById("chart"); //img3 is being identified as the "chart" image from above
+  			context3.drawImage(img3, 10, 10); //img3 is drawn in 2D at its coordinates, 10 down and 10 across from the top left corner of the canvas
+			}
+		</script>
+								     
+	<p><button type="button" onclick="createImage()">Image</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function createImage, which is done by the onclick command. the text on the button says Image -->
+	
 </div>
 	
 </div>
