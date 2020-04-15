@@ -376,14 +376,16 @@ change with every page. some onclick commands have multiple functions to run bec
 	<div id="content" class="w3-container">
 	</div>
 	
-	<canvas id="myCanvas" width="200" height="150" style="border:3px solid #d3d3d3;"> 
-	<!--created a canvas element called myCanvas, dimensions are 200x150. 
+	<canvas id="myCanvas" width="750" height="750" style="border:3px solid #d3d3d3;"> 
+	<!--created a canvas element called myCanvas, dimensions are 750x750. 
 	there's also a border around the canvas, defined by the style attribute. it is a 3 pixel wide solid grey border -->
 	</canvas>
 	
-	<img id="chart" src="chart.png" alt="chart" width="150" height="75" > <!--this identifies an image called chart. the source of the image is the png
-called chart.png which was uploaded to this repository. if chart.png is not found, the word chart will be displayed. 
-the image's dimensions are 150x75 -->
+	<img id="chart" src="resizedchart.png" alt="chart" width="150" height="75" style="display:none;"> 
+	<!--this identifies an image called chart. the source of the image is the png
+	called resizedchart.png which was uploaded to this repository. if resizedchart.png is not found, the word chart is displayed. 
+	the image's dimensions are 150x75. but it doesn't matter because it is hidden by the style attribute display:none.
+	this is just refrenced so the code below has the image when it is run. -->
 		
 		<script> //starting the JavaScript part of the button so it can perform a function
 		function createImage() { //the createImage function is defined. this function will put the image identified above on the canvas
