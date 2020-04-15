@@ -38,25 +38,40 @@ meta tags contain important info about the code, but don't show up when the code
 up on the tab of the website.-->
 
 <script>
-        var YESinfection_count = 0;
-        var NOinfection_count = 0;
-	var YESinfectionPercent = 0; 
-	var NOinfectionPercent = 0;
-		
-        function YESinfectionAdd(){
-            YESinfection_count = YESinfection_count + 1;
+        var corona_count = 0;
+        var cold_count = 0;
+	var flu_count = 0;
+	var allergies_count = 0;
+	
+	var corona_percent = 0; 
+	var cold_percent = 0;
+	var flu_percent = 0;
+	var allergies_percent = 0;
+	
+        function coronaAdd(){
+            corona_count = corona_count + 1;
+        }
+	
+	
+	function coldAdd(){
+            cold_count = cold_count + 1;
+        }
+	
+	
+	function fluAdd(){
+            flu_count = flu_count + 1;
         }
 
-        function NOinfectionAdd(){
-            NOinfection_count = NOinfection_count + 1;
+        function allergiesAdd(){
+            allergies_count = allergies_count + 1;
         }
 	
 		
 /*this java script defines the variables I will be using in my functions. 
-the YESinfection count and NOinfection count variables start at 0 before any questions are answered 
+the illness_count variables start at 0 before any questions are answered 
 and are added to when the user clicks yes or no (depending on the question). The functions 
-for YESinfectionAdd and NOinfectionAdd are simple because they just add 1 to the corresponding count as buttons are clicked on the questions pages. 
-the variables YESinfectionPErcent and NOinfectionPercent are defined here but not used until later in the code. 
+for illnessAdd are simple because they just add 1 to the corresponding count as buttons are clicked on the questions pages. 
+the variables illness_percent are defined here but not used until later in the code. 
 Note that all code written in JavaScript is started and ended with the script closer. */
 	
   </script>
@@ -124,15 +139,11 @@ the max height and max width are the max percentage of the image can be of the s
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>DO YOU HAVE AN INFECTION?</h1>
+	<h1>IS IT CORONAVIRUS??? or just a cold, flu, or allergies</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>so you got a cut and broke the skin barrier, exposing yourself to all the gross bacteria in the world and don't know if you have an infection or not.</p>
-	
-	<p>you've come to the right place. just answer 4 quick yes/no questions and find out if you might have an infection. 
-	and in the future, please be careful. there's a lot of bad bacteria out there waiting to ruin your life :) 
-	</p>
+	<p>answer 11 easy questions to see if you have coronavirus, a cold, flu, or allergies</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> LET'S GO </a>
 	
@@ -156,9 +167,11 @@ id= one. all these page instructions are found between the <a> </a>. -->
 	</div>
 	
     	<div id="content" class="w3-container">
-        	<p>Is the redness around your wound increasing?</p>  
-		<a href="#two" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#two"  onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
+        	<p>How long have you been experiencing symptoms?</p>  
+		<a href="#two"  onclick="coronaAdd();" class="w3-btn w3-black"> 7-25 days  </a> 
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> less than 14 days </a>
+		<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black"> 7-14 days </a>
+		<a href="#two"  onclick="allergiesAdd();" class="w3-btn w3-black"> several weeks </a>
 		
     	</div>
 </div>
@@ -169,40 +182,48 @@ as a page and is given the id of one because it's the first question page. The n
 title is Question 1. The question 1 header is displayed on the screen because it is between the <h1> and </h1> which identify a header type. 
 The header division is closed off by a </div> (as always) and a new division starts. This next division holds the content of the page.
 Here we ask the first question, which is surrounded by the <p> and </p>, which are paragraph elements. These allow you to write between 
-them. We see the button function again (<a> </a>) but there are two this time, because we are asking a yes or no question. when clicked,
+them. We see the button function again (<a> </a>) but there are four this time. when clicked,
 the buttons take the user to the page identified in href= . (This is the case for all buttons, except the results button on the results
-page, because it is the last page and the results appear right there on that page, so there is no href for that button.) Both buttons are
+page, because it is the last page and the results appear right there on that page, so there is no href for that button.) All buttons are
 coded as black with white text and when a button is clicked, the corresponding function (which is named after the onclick=) runs and adds
-a number to the proper variables described above. Finally, the buttons are labled >yes< or >no<, so the user click on their answer. 
-when they click, depending on the question and the answer, a point will be added to either the NOinfection or YESinfection count, using the functions
-above. This format of adding a division for each page, identifying it with a number and using more divisions to create the apprppriate 
-headers, questions, and buttons (with adding counts), is repeated for the next five questions pages. The basic formula of each page is 
-the same, but the questions asked (between the <p> </p>) and the onclick commands (which add to the correct NOinfection or YESinfection counts) 
-change with every page. -->
+a number to the proper variables described above. The buttons display the text between the > </a> and vary for each question and illness. 
+when they click, depending on the question and the answer, a point will be added to proper illness_counts, using the functions
+above. This format of adding a division for each page, identifying it with a number and using more divisions to create the appropriate 
+headers, questions, and buttons (with adding counts), is repeated for the next twelve questions pages. The basic formula of each page is 
+the same, but the questions asked (between the <p> </p>) and the onclick commands (which add to the correct illness_counts) 
+change with every page. some onclick commands have multiple functions to run because some illnesses share the same symptoms-->
 
-<div class="page" id="two"> 
-	<div class="w3-container w3-flat-carrot">
+
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#three" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
-</div>	
+    	<div id="content" class="w3-container">
+        	<p>Do you have a cough? Select the button that best describes your cough.</p>  
+		<a href="#three"  onclick="coronaAdd();fluAdd();" class="w3-btn w3-black">yes, a dry cough</a> 
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">yes, a mild cough</a>
+		<a href="#three"  onclick="allergiesAdd();" class="w3-btn w3-black">rarely</a>
+		
+    	</div>
+</div>
 
+	
+	
 <div class="page" id="three"> 
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is the wound oozing yellow or greenish pus or cloudy drainage?</p>
-		<a href="#four" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#four" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Are you experiencing shortness of breath?</p>  
+		<a href="#four"  onclick="coronaAdd();" class="w3-btn w3-black">sometimes</a> 
+		<a href="#four"  onclick="coldAdd();fluAdd();allergiesAdd();" class="w3-btn w3-black">no</a>		
+    	</div>
 </div>
+	
+	
+	
 	
 <div class="page" id="four"> 
 	<div class="w3-container w3-flat-carrot">
@@ -210,10 +231,12 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#results" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#results" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Are you sneezing?</p>  
+		<a href="#five"  onclick="coronaAdd();fluAdd();" class="w3-btn w3-black">no</a> 
+		<a href="#five"  onclick="coldAdd();allergiesAdd();" class="w3-btn w3-black">yes</a>		
+    	</div>
+</div>
+	
 	
 	
 <div class="page" id="five"> 
@@ -222,10 +245,12 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#six" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#six" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Do you have a stuffy or runny nose?</p>  
+		<a href="#six"  onclick="coronaAdd();" class="w3-btn w3-black">rarely</a> 
+		<a href="#six"  onclick="coldAdd();allergiesAdd()" class="w3-btn w3-black">yes</a>
+		<a href="#six"  onclick="fluAdd();" class="w3-btn w3-black">sometimes</a>
+   	</div>
+</div>
 	
 	
 <div class="page" id="six"> 
@@ -234,10 +259,13 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#seven" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#seven" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Do you have a sore throat?</p>  
+		<a href="#seven"  onclick="coronaAdd();fluAdd();" class="w3-btn w3-black">sometimes</a> 
+		<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">yes</a>
+		<a href="#seven"  onclick="allergiesAdd();" class="w3-btn w3-black">sometimes; it's mild</a>
+		
+    	</div>
+</div>
 	
 	
 <div class="page" id="seven"> 
@@ -246,10 +274,13 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#eight" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#eight" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Do you have a fever?</p>  
+		<a href="#eight"  onclick="coronaAdd();fluAdd();" class="w3-btn w3-black">yes</a> 
+		<a href="#eight"  onclick="coldAdd();" class="w3-btn w3-black">yes, but only for a short while</a>
+		<a href="#eight"  onclick="allergiesAdd();" class="w3-btn w3-black">no</a>
+		
+    	</div>
+</div>
 	
 	
 <div class="page" id="eight"> 
@@ -258,10 +289,11 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#nine" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#nine" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Do you feel weak and tired?</p>  
+		<a href="#nine"  onclick="coronaAdd();coldAdd();allergiesAdd();" class="w3-btn w3-black">sometimes</a> 
+		<a href="#nine"  onclick="fluAdd();" class="w3-btn w3-black">yes</a>
+    	</div>
+</div>
 	
 	
 	
@@ -271,10 +303,14 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#ten" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#ten" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Do you get headaches?</p>  
+		<a href="#ten"  onclick="coronaAdd();" class="w3-btn w3-black">sometimes</a> 
+		<a href="#ten"  onclick="coldAdd();" class="w3-btn w3-black">rarely</a>
+		<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-black">yes</a>
+		<a href="#ten"  onclick="allergiesAdd();" class="w3-btn w3-black">sometimes, due to sinus pains</a>
+		
+    	</div>
+</div>
 	
 	
 	
@@ -284,10 +320,13 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#eleven" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#eleven" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Do you get body aches and pains?</p>  
+		<a href="#eleven"  onclick="coronaAdd();" class="w3-btn w3-black">sometimes</a> 
+		<a href="#eleven"  onclick="coldAdd();fluAdd();" class="w3-btn w3-black">yes</a>
+		<a href="#eleven"  onclick="allergiesAdd();" class="w3-btn w3-black">no</a>
+		
+    	</div>
+</div>
 	
 	
 	
@@ -297,10 +336,12 @@ change with every page. -->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is there increased pain, swelling , or tenderness around the wound?</p>
-		<a href="#results" onclick="YESinfectionAdd();" class="w3-btn w3-black"> Yes </a> 
-		<a href="#results" onclick="NOinfectionAdd();" class="w3-btn w3-black"> No </a> 
-	</div>
+        	<p>Do you have diarrhea?</p>  
+		<a href="#three"  onclick="coronaAdd();" class="w3-btn w3-black">sometimes</a> 
+		<a href="#three"  onclick="coldAdd();allergiesAdd();" class="w3-btn w3-black">no</a>
+		<a href="#three"  onclick="fluAdd();" class="w3-btn w3-black">sometimes, and I am a child</a>
+    	</div>
+</div>
 	
 	
 	
