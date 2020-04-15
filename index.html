@@ -397,8 +397,31 @@ change with every page. some onclick commands have multiple functions to run bec
 		</script>
 								     
 	<p><button type="button" onclick="createImage()">Image</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function createImage, which is done by the onclick command. the text on the button says Image -->
-	
+	<a href="#explain"  class="w3-btn w3-black">documentation page</a>
 </div>
+	
+<div class="page" id="explain"> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>How I wanted to display results</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+        	<p>Although I do have results to the questions, I actually wanted to display the results using the canvas and drawing 
+		on the canvas. My plan was to have a canvas with a picture of the chart in it, which I was actually able to do.
+		On the chart I was going to put an X on top of every symptom the user said they showed according to the quiz they just
+		took. So for example, for the first question, if the user said they have had been experiencing symptoms for several
+		weeks, on the chart in results page, there would be an X on the last square of the 'length of symptoms' row.
+		Then for the second question, if the user said they rarely had a cough, an X would be put on the last square in the 
+		second row for cough. Theoretically, everytime the user answered a question, an X would be put down for that row
+		depending on their answer. After all the questions were answered, the final chart with all the X's would show up on 
+		the results page and the user would be able to see which column has the most X's and determine which illness they have.
+		I wasn't able to do this because I wasn't sure how to position the X on the picture according to the button clicked.
+		I also wasn't sure how to make a button on one page start the command to write text on a canvas on a seperate page. 
+		My final issue was that some illnesses had the same symptoms and I didn't know how to draw two seperate things with only 
+		one button. </p>   
+    	</div>
+</div>	
+	
 	
 </div>
 	
