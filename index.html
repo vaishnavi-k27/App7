@@ -156,10 +156,7 @@ the max height and max width are the max percentage of the image can be of the s
 		Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
-	
-	<img src="cut on knee.jpg" alt="cut on knee" style="width:350px;height:200px;">
-	
-	
+		
 <!-- above is code for the cover page of this website. it has the paragrapgh of intoductory text (which is classified by the <p>). there is also a button 
 with with the text "LET'S GO" on it. it is stylized to have a rounded rectangular shape with the w3-round command and was colored grey with
 w3-grey. when you press the button, it takes you to the next page. this is because of the href= command which directs the user to page one or 
@@ -364,10 +361,12 @@ change with every page. some onclick commands have multiple functions to run bec
 			allergies_percent = allergies_count/11; 
 
 			var resultText = document.getElementById("actualresults"); 
-			resultText.innerHTML = "Probability it is coronavirus =" + corona_percent + 
-				"<br> Probability it is a cold =" + cold_percent +
-				"<br> Probability it is a flu =" + flu_percent +
-				"<br> Probability it is allergies =" + allergies_percent;
+			resultText.innerHTML = 
+				"Percentage of your symptoms that indicate you might have coronavirus =" + corona_percent + 
+				"<br> Percentage of your symptoms that indicate you might have a cold =" + cold_percent +
+				"<br> Percentage of your symptoms that indicate you might have a flu =" + flu_percent +
+				"<br> Percentage of your symptoms that indicate you might have allergies =" + allergies_percent +
+				"<br> <br> the illness with the largest percentage is the one you most likely have" ;
 			}
 	</script>
 	
@@ -396,9 +395,21 @@ change with every page. some onclick commands have multiple functions to run bec
 			}
 		</script>
 								     
-	<p><button type="button" onclick="createImage()">Image</button></p> <!-- a button is added here, identified by type = button. when clicked it will perform the function createImage, which is done by the onclick command. the text on the button says Image -->
+	<p><button type="button" onclick="createImage()">Image</button></p> <!-- a button is added here, identified by type = button.
+	when clicked it will perform the function createImage, which is done by the onclick command. the text on the button says Image -->
 	<a href="#explain"  class="w3-btn w3-black">documentation page</a>
 </div>
+	
+<!-- This is the second to last page of the app 7 and it is identified as the results page. The first division is similar to 
+the other pages at the header, but changes from there. Here I use JavaScript to create a new function called Results() to calculate 
+the probability each illness. To make the Results() function with JavaScript, I used <script> and the variables set in the beginning 
+code, like the illness_counts and illness_percents. I set corona_percent = corona_count/11 (which was collected
+from the 11 questions) and divided by 11 because there were 11 questions. I did the same with the other illness variables.
+To display the percentages, I used the code given to us in a previous app assignment. This code creates a variable to display the result text 
+and then using the innerHTML command, displays the text for propabilities of each illness with their corresponding percentages. 
+The <br> is used to break the text and go to the next line, like an enter key. I end with the </script> because I am done with the 
+function and need to switch from JavaScript to HTML. The last part of the results page is a button that will display the percentages
+I found with the Results() function. This will displayed because of the onclick= command. I end the page with the closing divisions. -->
 	
 <div class="page" id="explain"> 
 	<div class="w3-container w3-flat-carrot">
@@ -420,22 +431,15 @@ change with every page. some onclick commands have multiple functions to run bec
 		My final issue was that some illnesses had the same symptoms and I didn't know how to draw two seperate things with only 
 		one button. </p>   
     	</div>
+	
 </div>	
-	
-	
+	<!--the format of this page is similar to the other pages in the id, class, and header sections. From there, this page is a lot
+	simpler than the other pages because it just has one division which contains text. the text on the page is surrounded by the 
+	<p> </p>. any text between those will appear on the page, which is what is happening here. That's it. There's not much else
+	going on with this page.-->
+		
 </div>
-	
-<!-- This is the last page of the app 7 and it is identified as the results page. The first division is similar to 
-the other pages at the header, but changes from there. Here I use JavaScript to create a new function called Results() to calculate 
-the probability each illness. To make the Results() function with JavaScript, I used <script> and the variables set in the beginning 
-code, like the illness_counts and illness_percents. I set corona_percent = corona_count/11 (which was collected
-from the 11 questions) and divided by 11 because there were 11 questions. I did the same with the other illness variables.
-To display the percentages, I used the code given to us in a previous app assignment. This code creates a variable to display the result text 
-and then using the innerHTML command, displays the text for propabilities of each illness with their corresponding percentages. 
-The <br> is used to break the text and go to the next line, like an enter key. I end with the </script> because I am done with the 
-function and need to switch from JavaScript to HTML. The last part of the results page is a button that will display the percentages
-I found with the Results() function. This will displayed because of the onclick= command. I end the page with the closing divisions. -->
-
+	<!-- this is the closing tag for the division that contains all the pages of this app.-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
